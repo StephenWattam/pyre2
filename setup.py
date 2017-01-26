@@ -50,6 +50,7 @@ else:
 
 # Locate the re2 module
 _re2_prefixes = [
+    os.getenv('RE2_PREFIX', ''),
     '/usr',
     '/usr/local',
     '/opt/',
