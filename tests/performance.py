@@ -8,8 +8,9 @@ To add a test, you can add a function to the bottom of this page that uses the
 @register_test() decorator. Alternatively, you can create a module that uses it and
 import it.
 """
+from __future__ import print_function
+
 from timeit import Timer
-import simplejson
 
 import re2
 import re
@@ -84,7 +85,7 @@ def benchmarks_to_ReST(benchmarks):
 
     for test, data in benchmarks.items():
         row = [test, data["re"][1], str(data["re"][3]), f(data["re"][0]), f(data["re2"][0])]
-        
+
         row.append(p(data["re2"][0] / data["re"][0]))
         if regex is not None:
             row.extend((f(data["regex"][0]), p(data["re2"][0] / data["regex"][0])))
@@ -94,9 +95,9 @@ def benchmarks_to_ReST(benchmarks):
         col_sizes[col] = max(len(row[col]) for row in table)
 
     def print_divider(symbol='-'):
-        print '+' + '+'.join(symbol*col_size for col_size in col_sizes) + '+'
+        print('+' + '+'.join(symbol*col_size for col_size in col_sizes) + '+')
     def print_row(row):
-        print '|' + '|'.join(item.ljust(col_sizes[i]) for i, item in enumerate(row)) + '|'
+        print('|' + '|'.join(item.ljust(col_sizes[i]) for i, item in enumerate(row)) + '|')
 
     print_divider()
     print_row(table[0])
