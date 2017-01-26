@@ -13,14 +13,17 @@ cdef extern from "<string>" namespace "std":
     ctypedef string const_string "const std::string"
 
 
+cdef extern from "<utility>" namespace "std":
+    cdef cppclass stringintpair "const std::pair<std::string, int>":
+        cpp_string first
+        int second
+
 
 cdef extern from "<map>" namespace "std":
     cdef cppclass stringintmapiterator "std::map<std::string, int>::const_iterator":
-        cpp_string first
-        int second
         stringintmapiterator operator++()
+        stringintpair& operator*()
         bint operator==(stringintmapiterator)
-        stringintmapiterator& operator*(stringintmapiterator)
         bint operator!=(stringintmapiterator)
 
     cdef cppclass const_stringintmap "const std::map<std::string, int>":
