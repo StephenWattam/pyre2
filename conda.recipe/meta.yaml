@@ -1,0 +1,26 @@
+package:
+  name: pyre2
+  version: "0.2.23"
+
+source:
+  path: ../
+
+build:
+  number: 1
+  script_env:
+    - MACOSX_DEPLOYMENT_TARGET
+
+requirements:
+  build:
+    - python
+    - re2
+  run:
+    - python
+    - re2
+
+
+test:
+  source_files:
+    - tests/
+  imports:
+    - re2
