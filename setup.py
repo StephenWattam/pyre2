@@ -79,14 +79,14 @@ def get_authors():
 
 def main():
     setup(
-        name="re2",
+        name="sw-re2",
         version="0.2.23",
-        description="Python wrapper for Google's RE2 using Cython",
+        description="Python 3 compatible wrapper for Google's RE2 using Cython",
         long_description=get_long_description(),
         author=get_authors(),
         license="New BSD License",
-        author_email = "mike@axiak.net",
-        url = "http://github.com/axiak/pyre2/",
+        author_email = "steve@stephenwattam.com",
+        url = "http://github.com/StephenWattam/pyre2/",
         ext_modules = [
             Extension(
                 "re2",
@@ -105,6 +105,7 @@ def main():
             'Programming Language :: Cython',
             'Programming Language :: Python :: 2.5',
             'Programming Language :: Python :: 2.6',
+            'Programming Language :: Python :: 3.6',
             'Intended Audience :: Developers',
             'Topic :: Software Development :: Libraries :: Python Modules',
             ],

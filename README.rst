@@ -78,7 +78,7 @@ If you don't want to use ``setuptools``, you can alternatively download the tarb
 
 Alternative to those, you can clone this repository and try installing it from there. To do this, run::
 
-    $ git clone git://github.com/axiak/pyre2.git
+    $ git clone git://github.com/StephenWattam/pyre2.git
     $ cd pyre2.git
     $ sudo python setup.py install
 
@@ -106,7 +106,7 @@ buzzes along.
 
 In the below example, I'm running the data against 8MB of text from the collosal Wikipedia
 XML file. I'm running them multiple times, being careful to use the ``timeit`` module.
-To see more details, please see the `performance script <http://github.com/axiak/pyre2/tree/master/tests/performance.py>`_.
+To see more details, please see the `performance script <http://github.com/stephenwattam/pyre2/tree/master/tests/performance.py>`_.
 
 +-----------------+---------------------------------------------------------------------------+------------+--------------+---------------+-------------+-----------------+----------------+
 |Test             |Description                                                                |# total runs|``re`` time(s)|``re2`` time(s)|% ``re`` time|``regex`` time(s)|% ``regex`` time|
@@ -129,8 +129,8 @@ and let me know if you run into any issues!
 Contact
 =======
 
-You can file bug reports on GitHub, or contact the author:
-`Mike Axiak  contact page <http://mike.axiak.net/contact>`_.
+You can file bug reports on GitHub -- as this is a fork for python 3 compatibility I recommend also reporting to the original author:
+`Mike Axiak  contact page <http://mike.steph.net/contact>`_.
 
 Tests
 =====
@@ -153,6 +153,8 @@ Currently the features missing are:
 
 Credits
 =======
+
+Thanks to Mike Axiak, who did the bulk of the work.
 
 Though I ripped out the code, I'd like to thank David Reiss
 and Facebook for the initial inspiration. Plus, I got to
