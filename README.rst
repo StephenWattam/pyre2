@@ -1,5 +1,5 @@
 =====
-pyre2
+sw-re2
 =====
 
 .. contents::
@@ -7,9 +7,10 @@ pyre2
 Summary
 =======
 
-pyre2 is a Python extension that wraps
+sw-re2 is a Python extension that wraps
 `Google's RE2 regular expression library
-<http://code.google.com/p/re2/>`_.
+<http://code.google.com/p/re2/>`_.  It is based on Mike Axiak's `pyre2` module,
+and is identical except for its support for python 3.
 
 This version of pyre2 is similar to the one you'd
 find at `facebook's github repository <http://github.com/facebook/pyre2/>`_
